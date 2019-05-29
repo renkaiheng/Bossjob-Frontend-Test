@@ -5,7 +5,6 @@ import Degrees from '../../assets/images/graduation-cap.svg';
 import Experience from '../../assets/images/portfolio.svg';
 import Time from '../../assets/images/time.svg';
 const JobList = ({jobDetail}) => {
-    console.log(jobDetail.salary_range_from)
     return (
     <React.Fragment>
         <div className="jobListContainer">

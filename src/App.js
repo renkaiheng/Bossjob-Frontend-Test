@@ -25,9 +25,8 @@ class App extends Component {
       <div className="App">
         <div className="App-Wrapper">
           <Header />
-          <div style={{padding: '10px 20px'}}>
           <SearchFilter />
-
+          <div style={{padding: '10px 20px'}}>
           {this.state.jobLists && <div className="totalJobs"> {this.state.jobLists.size} jobs found </div>}
           {this.state.jobLists &&
             this.state.jobLists.jobs.map((jobs) => {
