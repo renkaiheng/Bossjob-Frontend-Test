@@ -1,0 +1,65 @@
+.jobListContainer{
+  display: block;
+  width:100%;
+  padding: 15px 0px;
+  color:#464646;
+  border-bottom: 1px solid #bcbcbc;
+}
+
+.jobHeader{
+  display: block;
+  height:50px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.jobTitle{
+  float: left;
+}
+
+.jobSalaryRange{
+  float: right;
+}
+
+.jobBody{
+  font-size: 14px;
+  font-weight:500;
+}
+
+.jobBody > table{
+  width: 270px;
+}
+
+.jobBody > table > tr > td > span{
+  margin-left: 10px;
+}
+
+.jobFooter{
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.jobFooter .companyName{
+  display:flex;
+  align-items:center;
+  width:70%
+}
+
+.jobFooter .companyName div{
+  display: inline-block;
+}
+
+.jobFooter .logo{
+  height:39px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.jobFooter .TimeAgo{
+  width: 30%;
+  text-align: right;
+  color:#BDBDBD
+}
