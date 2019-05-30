@@ -15,3 +15,11 @@
     font-size: 17px;
     font-weight: 600;
 }
+
+.pagination li.active{
+    color:lightskyblue;
+}
+
+.pagination li,a:focus{
+    outline:none;
+}

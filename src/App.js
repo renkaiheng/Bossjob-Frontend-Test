@@ -29,25 +29,28 @@ class App extends Component {
 
 
   render() {
-    console.log(this.props.jobLists ? this.props.jobLists.jobs : "");
     return (
       <div className="App">
         <div className="App-Wrapper">
           <Header />
-          <SearchFilter 
-            handleChange = {this.handleChange}
-            handleSubmit = {this.handleSubmit}/>
-          <div style={{padding: '10px 20px'}}>
-          {this.props.jobLists && <div className="totalJobs"> {this.props.jobLists.total_num} jobs found </div>}
           {
-            this.props.jobLists && this.props.jobLists.jobs.map((jobs) => {
-              return (
-                <JobList key={jobs.id} jobDetail = {jobs}/>
-              )
-            })
+            this.props.jobLists &&
+            <React.Fragment>
+              <SearchFilter 
+                handleChange = {this.handleChange}
+                handleSubmit = {this.handleSubmit}/>
+              <div style={{padding: '10px 20px'}}>
+              {
+                <div className="totalJobs"> {this.props.jobLists.total_num} jobs found </div>
+              }
+              {
+                <JobList jobsData = {this.props.jobLists} />
+              }
+                <Paginate totalPage = {this.props.jobLists.total_pages} handlePageClick = {this.handlePageClick}/>
+              </div>
+            </React.Fragment>
           }
-          <Paginate totalPage = {this.props.jobLists ? this.props.jobLists.total_pages : 0} handlePageClick = {this.handlePageClick}/>
-          </div>
+          
         </div>
       </div>
     );
